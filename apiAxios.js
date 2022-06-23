@@ -5,7 +5,7 @@ const ApiAxios = () => {
     const [error, setError] = useState(false)
 
     useEffect(async () => {
-        // const getList = async () => {
+        // always a good way to use a try catch (P. dalla's sugg)
         try {
             await axios.get("https://api.github.com/users").then((response) => {
                 console.log("Check the below response")
