@@ -5,8 +5,7 @@ const players112 = ["Ram", "Shyam", "Bash", "Akesha", "Surya", "Rajendra", "Ram"
 const MapDelete = (props) => {
     //const {mapDelete} = props
     // const [players, setPlayers] = useState(mapDelete)
-    const [players, setPlayers] = useState(players112)
-  //Ask dallas, why we need to have on line 10 as const instead of handleClick only as on line 25, didn't we call as a function on line 25? got questions
+    const [players, setPlayers] = useState(players112)  
     const handleClick= (index) => {
       const newPlayers = [...players];
       newPlayers.splice(index, 1)
