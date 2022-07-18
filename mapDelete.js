@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-//import { useState } from 'react/cjs/react.development';
 
 const players112 = ["Ram", "Shyam", "Bash", "Akesha", "Surya", "Rajendra", "Ram"] 
 const MapDelete = (props) => {    
