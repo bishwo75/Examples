@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 //import { useState } from 'react/cjs/react.development';
 
 const players112 = ["Ram", "Shyam", "Bash", "Akesha", "Surya", "Rajendra", "Ram"] 
-const MapDelete = (props) => {
-    //const {mapDelete} = props
-    // const [players, setPlayers] = useState(mapDelete)
+const MapDelete = (props) => {    
     const [players, setPlayers] = useState(players112)  
     const handleClick= (index) => {
       const newPlayers = [...players];
