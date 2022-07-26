@@ -1,0 +1,34 @@
+import React, { Component } from 'react';
+import axios from "axios";
+class MakeApi extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            character: []
+         }
+    }
+    componentDidMount()  {
+        axios.get("https://api.github.com/users")
+        .then(response => {
+        const text = response.data;        
+         this.setState({
+                character: text
+            })
+        })
+    }
+    render() { 
+        return (
+             <div>
+            <ul>
+                {this.state.character.length > 0 && this.state.character.map((item) => {
+                return (
+                    <li key={item.id}>{item.login}</li>
+                );
+                })
+            }</ul>
+        </div> 
+        );
+    }
+}
+ 
+export default MakeApi;
