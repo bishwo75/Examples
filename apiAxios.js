@@ -30,3 +30,25 @@ const ApiAxios = () => {
 }
  
 export default ApiAxios;
+
+// const MapDelete = () => {   
+//   const [api, setApi] = useState([]) 
+//   useEffect(() => {
+//     axios.get("https://api.github.com/users").then(response =>{      
+//       setApi(response.data)      
+//     })
+//   }, [])
+  
+//     return ( 
+//       <div className='App'>
+//       {api.map(a=><li key={a.login}>{a.login}</li>)}
+//       < br />
+//       <p> Let's see from Parent to child</p>
+//       <Parent />
+//       <br />
+//       <br />
+//       </div>            
+//      );
+// }
+ 
+// export default MapDelete;
