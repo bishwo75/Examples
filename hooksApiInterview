@@ -1,0 +1,23 @@
+
+import './App.css';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react';
+
+function App() {  
+  const [data1, setData1] = useState([])
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/photos').then(response =>{
+      setData1(response.data)
+    })
+  }, [])
+  return (    
+   <div className='App'>
+    <ul>
+    {data1.map(({id, title, url})=><li key={id}>{title} <img src={url} style={{width:"10px", height:"10px"}} /></li>)}
+    </ul>
+    {data1.length}
+   </div>
+  )
+}
+
+export default App;
