@@ -21,6 +21,7 @@ const MapDelete = () => {
           return post;
         }
         else if (post.login.toLocaleLowerCase().includes(query.toLocaleLowerCase())){
+          //else if (post.login.includes(query)) instead of above, we can do this one too, above filtering lower and upper case
           return post;
         }
        }).map((post, index) => (    
