@@ -27,7 +27,7 @@ const MapDelete = () => {
        }).map((post, index) => (    
         <div className='box' key={index}>
             <p>{post.login}</p>
-            {/* <p>{post.last_name}</p> */}
+            {/* <p>{post.last_name}</p>  also, it can be .map(item, index too instead of post */}
         </div>
        ))}
        </div>        
