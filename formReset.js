@@ -21,3 +21,7 @@ const MapDelete = () => {
 }
  
 export default MapDelete;
+//Also, if we want to show the reset button once both first name and last name input field are filled, then we can write like this:
+// {name.firstName.length > 0 && name.lastName.length >0  && 
+//     <button onClick={()=>setName({firstName:'', lastName:''})}>Reset</button>
+//   }
