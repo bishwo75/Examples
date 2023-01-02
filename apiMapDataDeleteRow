@@ -1,0 +1,30 @@
+import React, { useState, useEffect } from 'react'
+import './App.css';
+import axios from 'axios';
+
+
+const App =() => {   
+  const [apii, setApii] = useState([])  
+  useEffect(()=> {
+    axios.get("https://api.github.com/users").then((response)=>{
+      setApii(response.data)
+    })
+  }, [])
+  const onDelete = (item)=> {    
+    const newApii = apii.filter((xyz)=> (xyz !== item))
+    console.log(newApii)
+    setApii(newApii)
+  }
+  return (
+    <div className="App">  
+    {apii.map((item)=>
+    <li key={item.id} onClick={()=>onDelete(item)}>{item.login}</li>)
+    }
+    <p>There are {apii.length} users in this platform.</p>
+
+    </div>
+  );
+}
+
+export default App;
+//Here, we are calling an API, mapping it's data on a row and clicking on each row will delete the row data and we update the new data
