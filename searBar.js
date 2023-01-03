@@ -35,6 +35,48 @@ const MapDelete = () => {
 } 
 export default MapDelete;
 
+//This below code has both api, api mapping, delete row of api and a search too
+// import React, { useState, useEffect } from 'react'
+// import './App.css';
+// import axios from 'axios';
+
+
+// const App =() => {   
+//   const [apii, setApii] = useState([])
+//   const [query, setQuery] = useState('')
+//   useEffect(() => {
+//     axios.get("https://api.github.com/users").then((response)=> {
+//     setApii(response.data)
+//     })
+//   }, [])
+  
+//   const onDelete = (item) => {
+//     const newApii = apii.filter((xyz)=> (
+//       xyz !== item
+//     ))
+//     setApii(newApii)
+//   }
+//    return (
+//     <div className="App">  
+//     <input type='text' placeholder='Search' onChange={(e)=>setQuery(e.target.value)}></input>    
+//     {
+//     apii.filter(post => {
+//       if (query === '') {
+//         return post
+//       } else if (post.login.includes(query)){
+//         return post;
+//       }
+//     })
+//     .map(item=><li key={item.id} onClick={()=>onDelete(item)}>{item.login}</li>)}
+//     <br />
+//     <p>There are {apii.length} users using our application.</p>
+    
+//     </div>
+//   );
+// }
+
+// export default App;
+
 //Also, for mockData.json; you can have the below but above, I mapped with API; 
 // [{
 //     "id": 1,
