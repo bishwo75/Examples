@@ -51,22 +51,21 @@ const Dallas = () => {
       else if (item.login.includes(query)){
         return item;
       }
-    }).map((item, index)=><div key={index} >    
-    
-      <tr>
-        <th>
+    }).map((item, index)=> (
+           <tr key={index} >    
+            <td>
     <label>
         <input type="checkbox" value={item.login}
         onChange={handleChange} /> 
          </label> 
-        </th>
-        <th>
+        </td>
+        <td>
         <span onClick={()=>onDelete(item)}>
         {item.login}
         </span>
-        </th>     
+        </td>     
       </tr>         
-    </div>)}
+    ))}
     </tbody>
       </table> 
     <p> There are {apii.length} logins</p>
@@ -79,3 +78,7 @@ const Dallas = () => {
 }
  
 export default Dallas;
+//Style.css put:
+//  tr:nth-child(odd) {
+//   background-color: #f2f2f2;
+// }
