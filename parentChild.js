@@ -45,3 +45,45 @@ class Child extends Component {
   }
 }
 export default Child;
+
+
+//Parent child using hooks:
+//On Parent Component: (have Parent component on another main App.js or somewhere if needed)
+import React, { useState } from 'react';
+import Child from './Child';
+const Parent = () => {
+    const name = "Shreyan"
+    const [data, setData] = useState('')
+    const onParent = (abc)=> {
+        setData(abc)
+    }
+    return ( 
+        <div>
+            <p>parent Component</p><br />
+            {data}
+            <br />
+            <br />
+            <Child abc={name} onParent={onParent}/>
+        </div>
+     );
+}
+ 
+export default Parent;
+
+
+//On Child Component:
+import React from 'react';
+const Child = (props) => {
+    return ( 
+        <div>
+            {props.abc}<br />
+            <button onClick={()=>props.onParent("from child")}>Child Button</button>
+        </div>
+     );
+}
+ 
+export default Child;
+
+
+
+
