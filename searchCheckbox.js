@@ -24,6 +24,7 @@ const Dallas = () => {
     setApii(newApii)    
  } 
 
+ 
  const handleChange = (e) => {  
   console.log(e.target.checked)
   console.log(e.target.value)
