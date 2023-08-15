@@ -28,3 +28,30 @@ const App =() => {
 
 export default App;
 //Here, we are calling an API, mapping it's data on a row and clicking on each row will delete the row data and we update the new data
+
+{/*Using Fetch:
+import React from 'react';
+const Intuit = () => {
+    const [api, setApi]= React.useState([])
+    React.useEffect(()=>{
+        fetch("https://api.github.com/users")
+        .then(resp=>{
+            return resp.json();
+        })
+        .then(data=>{
+            setApi(data)            
+        })   
+    }, [])
+    return ( 
+        <div>
+            {api && api.map((item) =>
+            <li key={item.id}>{item.login}</li>
+            )}
+        </div>
+     );
+}
+ 
+export default Intuit;*/}
+
+
+
