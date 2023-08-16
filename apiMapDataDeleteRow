@@ -53,5 +53,45 @@ const Intuit = () => {
  
 export default Intuit;*/}
 
+//Fetch & delete - Hooks, Api 
+import "./styles.css";
+import React from 'react'
+
+export default function App() {
+  const [api, setApii] = React.useState([]);
+  React.useEffect(()=> {
+    fetch("https://jsonplaceholder.typicode.com/users").then(resp=>{
+      return resp.json();
+  })
+      .then(data=>{
+        setApii(data)
+      })   
+  }, [])
+  const onDelete = (item) => {
+    const newList = api.filter(iabc => (
+      iabc !==  item ))
+      setApii(newList)
+    }
+  return (
+    <div className="App">
+      {api && api.map(item=>
+      <table className="customers">
+        <tbody>
+          <tr >   
+            <td key={item.id} style={{color: "blue", border: "1px solid #ddd"}}  >  
+            
+  
+          {item.name}  </td> 
+          <td style={{color: "blue", border: "1px solid #ddd" }}>
+            <button onClick={()=>onDelete(item)}>Delete</button></td>
+      </tr>
+      </tbody>
+      </table>)}
+      <p>There are {api.length} people here at Inter Miami</p>
+    </div>
+  );
+}
+
+
 
 
