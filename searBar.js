@@ -34,8 +34,15 @@ const MapDelete = () => {
  );
 } 
 export default MapDelete;
+//Search on a diff way if not doing above filter way;
+//const searchItem = api.filter(item=>{
+//item.login.includes(e.target.value)
+//}
+//setApi(searchItem)
 
-//This below code has both api, api mapping, delete row of api and a search too
+
+
+//This below code has both api, api mapping, delete row of api and a search too - Namste React, 24th Aug 2023
 // import React, { useState, useEffect } from 'react'
 // import './App.css';
 // import axios from 'axios';
